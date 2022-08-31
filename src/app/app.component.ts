@@ -109,8 +109,6 @@ export class AppComponent implements OnInit {
       }
 
       this.dataAttuale = new Date().toLocaleString('it-IT', { month:'2-digit',day:'2-digit' })
-      // console.log(this.dataAttuale)
-      // this.dataAttuale = '31/10'
 
       this.bg= backgrounds[this.randomNumberBackground]
       this.frase = frasi[this.randomNumberFrasi] 
