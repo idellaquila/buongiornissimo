@@ -45,6 +45,13 @@ export class AppComponent implements OnInit {
   font = font;
   color = color;
   positionText = positionText;
+  day!: string;
+  dataAttuale!: string;
+  bg: any;
+  frase:any;
+  buongiorno: string = 'BUONGIORNO!';
+  srcHeader: any;
+  srcFooter: any;
 
   ngOnInit(): void {
     this.calcVariables();
@@ -94,5 +101,28 @@ export class AppComponent implements OnInit {
     this.giornoAttuale = new Date()
       .toLocaleString('it-IT', { weekday: 'long' })
       .toUpperCase();
+
+      if(this.giornoAttuale == 'DOMENICA'){
+        this.day = 'BUONA'
+      } else{
+        this.day = 'BUON'
+      }
+
+      this.dataAttuale = new Date().toLocaleString('it-IT', { month:'2-digit',day:'2-digit' })
+      // console.log(this.dataAttuale)
+      // this.dataAttuale = '31/10'
+
+      this.bg= backgrounds[this.randomNumberBackground]
+      this.frase = frasi[this.randomNumberFrasi] 
+      this.srcHeader = imgHeader[this.randomNumberImgHeader]
+      this.srcFooter = img[this.randomNumberImg]
+
+    if(this.dataAttuale =='31/10'){
+      this.bg = 'assets/backgrounds/halloween.jpg'
+      this.frase = 'Vestitevi di sincerità...perchè la sincerità al giorno d\'oggi è diventata un mostro, spaventa tutti!!!!'
+      this.buongiorno = 'BUON HALLOWEEN!'
+      this.srcHeader = 'assets/img/zucca.png'
+      this.srcFooter = 'assets/img/boo.png'
+    }
   }
 }

@@ -1,7 +1,7 @@
 <div
   [ngStyle]="{
     background:
-      'url(' + backgrounds[randomNumberBackground] + ') no-repeat 0 0 / cover',
+      'url(' + bg + ') no-repeat 0 0 / cover',
       'flex-direction': randomNumberColumnDirection == 0 ? 'column' : 'column-reverse'}"
   class="wrapper"
 >
@@ -15,7 +15,7 @@
       'align-self':positionText[randomNumberPositionHeaderText]
     }"
   >
-    BUONGIORNO!
+  {{buongiorno}}
   </div>
   <div
     class="frase"
@@ -26,14 +26,14 @@
 
     [ngClass]="randomNumberPaddingFrase == 0 ? 'top': 'bottom'"
   >
-    {{ frasi[randomNumberFrasi] }}
+    {{ frase}}
   </div>
-  <img class="imgTop" [ngStyle]="randomNumberImgTopPosition <= 2 ? { 'right': 0 } : { 'left': 0 }" [src]="imgHeader[randomNumberImgHeader]" />
+  <img class="imgTop" [ngStyle]="randomNumberImgTopPosition <= 2 ? { 'right': 0 } : { 'left': 0 }" [src]="srcHeader" />
   <img
 
   class="imgBottom"
     [ngStyle]="randomNumberImgPosition <= 2 ? { 'right': 0 } : { 'left': 0 }"
-    [src]="img[randomNumberImg]"
+    [src]="srcFooter"
   />
   
   <div
@@ -45,6 +45,6 @@
       'align-self':positionText[randomNumberPositionFooterText]
     }"
   >
-    BUON {{ giornoAttuale }}
+    {{day}} {{ giornoAttuale }}
   </div>
 </div>
