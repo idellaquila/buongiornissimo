@@ -1,3 +1,5 @@
+
+//Array di frasi 
 export const frasi: string[] = [
   'Parti ogni mattina pensando alla migliore versione di te stesso, e la tua giornata non potrà che essere piena di gioia e magia!',
   'Anche se fuori piove, trova il sole dentro il tuo cuore e fallo splendere ovunque. Farai della tua giornata un capolavoro!',
@@ -21,6 +23,7 @@ export const frasi: string[] = [
   'SVEGLIAAAAAA!!! Il caffè è pronto...',
 ];
 
+//Array di immagini png di personaggi
 export const img: string[] = [
   'assets/img/masha_e_orso.png',
   'assets/img/minnie.png',
@@ -29,6 +32,7 @@ export const img: string[] = [
   'assets/img/png_winnie_pooh.png',
 ];
 
+//Array di immagini di caffè e fiori
 export const imgHeader: string[] = [
     'assets/img/caffe.png',
     'assets/img/caffe1.png',
@@ -37,6 +41,7 @@ export const imgHeader: string[] = [
     'assets/img/rosa.png',
 ];
 
+//Array di sfondi
 export const backgrounds: string[] = [
   'assets/backgrounds/sfondo_1.jpg',
   'assets/backgrounds/sfondo_2.jpg',
@@ -45,6 +50,7 @@ export const backgrounds: string[] = [
   'assets/backgrounds/sfondo_5.jpg',
 ];
 
+//Array di font
 export const font: string[] = [
   'Qwitcher Grypen, cursive',
   '"Comic Sans MS", "Comic Sans", cursive',
@@ -53,6 +59,7 @@ export const font: string[] = [
   'Indie Flower, cursive',
 ];
 
+//Array di colori
 export const color: string[] = [
   'red',
   'orange',
@@ -67,4 +74,5 @@ export const color: string[] = [
   '#ae2012',
 ];
 
+//Array di position
 export const positionText: string[] = ['center', 'flex-start', 'flex-end'];

@@ -49,23 +49,27 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.calcVariables();
   }
-
+  //Questo metodo crea un nunero random tra 0 e la lunghezza massima dell'array
   getRandomNumberRange(arrLength: number) {
     return Math.floor(Math.random() * arrLength);
   }
 
+  //Questo metodo crea un nunero random tra 2 valori, max e min
   getRandomNumberDeg(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
-
-  getRandomBoolean(){
-    return Math.round(Math.random())
+  //Questo metodo crea un nunero random tra 0 e 1
+  getRandomBoolean() {
+    return Math.round(Math.random());
   }
 
+  //Questo metodo crea lle variabili in modo randomico
   calcVariables() {
     this.randomNumberFrasi = this.getRandomNumberRange(this.frasi.length);
     this.randomNumberImg = this.getRandomNumberRange(this.img.length);
-    this.randomNumberImgHeader = this.getRandomNumberRange(this.imgHeader.length);
+    this.randomNumberImgHeader = this.getRandomNumberRange(
+      this.imgHeader.length
+    );
     this.randomNumberBackground = this.getRandomNumberRange(
       this.backgrounds.length
     );
