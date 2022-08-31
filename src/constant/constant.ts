@@ -29,6 +29,14 @@ export const img: string[] = [
   'assets/img/png_winnie_pooh.png',
 ];
 
+export const imgHeader: string[] = [
+    'assets/img/caffe.png',
+    'assets/img/caffe1.png',
+    'assets/img/caffe2.png',
+    'assets/img/girasole.png',
+    'assets/img/rosa.png',
+];
+
 export const backgrounds: string[] = [
   'assets/backgrounds/sfondo_1.jpg',
   'assets/backgrounds/sfondo_2.jpg',

@@ -5,6 +5,7 @@ import {
   font,
   frasi,
   img,
+  imgHeader,
   positionText,
 } from '../constant/constant';
 
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
 
   randomNumberFrasi!: number;
   randomNumberImg!: number;
+  randomNumberImgHeader!: number;
   randomNumberBackground!: number;
   randomNumberFontFrase!: number;
   randomNumberFontBg!: number;
@@ -25,18 +27,20 @@ export class AppComponent implements OnInit {
   randomNumberColorBgHeader!: number;
   randomNumberColorBgFooter!: number;
   randomNumberImgPosition!: number;
+  randomNumberImgTopPosition!: number;
   randomNumberHeaderRotation!: number;
   randomNumberFooterRotation!: number;
   randomNumberFraseRotation!: number;
   randomNumberColumnDirection!: number;
   randomNumberPositionHeaderText!: number;
   randomNumberPositionFooterText!: number;
+  randomNumberPaddingFrase!: number;
   positionHeaderText!: string;
   positionFooterText!: string;
-  positionFraseText!: string;
   giornoAttuale!: string;
   frasi = frasi;
   img = img;
+  imgHeader = imgHeader;
   backgrounds = backgrounds;
   font = font;
   color = color;
@@ -54,9 +58,14 @@ export class AppComponent implements OnInit {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
+  getRandomBoolean(){
+    return Math.round(Math.random())
+  }
+
   calcVariables() {
     this.randomNumberFrasi = this.getRandomNumberRange(this.frasi.length);
     this.randomNumberImg = this.getRandomNumberRange(this.img.length);
+    this.randomNumberImgHeader = this.getRandomNumberRange(this.imgHeader.length);
     this.randomNumberBackground = this.getRandomNumberRange(
       this.backgrounds.length
     );
@@ -70,12 +79,14 @@ export class AppComponent implements OnInit {
       this.color.length
     );
     this.randomNumberImgPosition = this.getRandomNumberRange(5);
+    this.randomNumberImgTopPosition = this.getRandomNumberRange(5);
     this.randomNumberHeaderRotation = this.getRandomNumberDeg(-15, 15);
     this.randomNumberFooterRotation = this.getRandomNumberDeg(-15, 15);
     this.randomNumberFraseRotation = this.getRandomNumberDeg(-10, 10);
-    this.randomNumberColumnDirection = Math.round(Math.random());
+    this.randomNumberColumnDirection = this.getRandomBoolean();
     this.randomNumberPositionHeaderText = this.getRandomNumberRange(2);
     this.randomNumberPositionFooterText = this.getRandomNumberRange(2);
+    this.randomNumberPaddingFrase = this.getRandomBoolean();
     this.giornoAttuale = new Date()
       .toLocaleString('it-IT', { weekday: 'long' })
       .toUpperCase();

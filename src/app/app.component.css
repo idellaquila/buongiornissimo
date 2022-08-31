@@ -10,11 +10,17 @@
     
 }
 
-img{
+.imgBottom{
     width: 30%;
     position: absolute;
     bottom: 0;
 
+}
+
+.imgTop{
+    width: 30%;
+    position: absolute;
+    top: 0;
 }
 
 .buongiorno{
@@ -29,4 +35,12 @@ img{
     font-weight: 700;
     z-index: 2;
     text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+}
+
+.top{
+    padding-top: 4rem;
+}
+
+.bottom{
+    padding-bottom: 4rem;
 }

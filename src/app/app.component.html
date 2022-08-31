@@ -22,17 +22,23 @@
       'color': color[randomNumberColorFrase],
       'font-family': font[randomNumberFontFrase],'transform': 'rotate(' +  randomNumberFraseRotation +'deg)'
     }"
+
+    [ngClass]="randomNumberPaddingFrase == 0 ? 'top': 'bottom'"
   >
     {{ frasi[randomNumberFrasi] }}
   </div>
+  <img class="imgTop" [ngStyle]="randomNumberImgTopPosition <= 2 ? { 'right': 0 } : { 'left': 0 }" [src]="imgHeader[randomNumberImgHeader]" />
   <img
-    [ngStyle]="randomNumberImgPosition <= 2 ? { right: 0 } : { left: 0 }"
+
+  class="imgBottom"
+    [ngStyle]="randomNumberImgPosition <= 2 ? { 'right': 0 } : { 'left': 0 }"
     [src]="img[randomNumberImg]"
   />
+  
   <div
     class="buongiorno"
     [ngStyle]="{
-      color: color[randomNumberColorBgFooter],
+      'color': color[randomNumberColorBgFooter],
       'font-family': font[randomNumberFontBg],
       'transform': 'rotate(' +  randomNumberFooterRotation +'deg)',
       'align-self':positionText[randomNumberPositionFooterText]
