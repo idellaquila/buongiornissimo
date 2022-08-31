@@ -1,0 +1,32 @@
+.wrapper{
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    
+}
+
+img{
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.buongiorno{
+    font-size: 40px;
+    z-index: 2;
+    font-weight: 700;
+    text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+}
+
+.frase{
+    font-size: 33px;
+    font-weight: 700;
+    z-index: 2;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+}
